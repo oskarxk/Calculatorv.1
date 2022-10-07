@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="theme-changer">
+            <p class="calc">calc</p>
+            <p class="theme">theme</p>
+            <div class="buttons">
+                <div class="button-numbers">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+                <div class="inputs">
+                    <label class="custom-radio-btn">
+                        <input type="radio" id="1" class="radiobtn" name="theme">
+                        <input type="radio" id="2" class="radiobtn" name="theme">
+                        <input type="radio" id="3" class="radiobtn" name="theme">
+
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="calculator-screen">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+        </div>
+
+        <div class="calculator-keys">
+
+            <button type="button" class="operator operator1" id="111" data-operation value="+">+</button>
+            <button type="button" class="operator operator2" id="222" data-operation value="-">-</button>
+            <button type="button" class="operator operator3" id="333" data-operation value="*">&times;</button>
+            <button type="button" class="operator operator4" id="444" data-operation value="&divide;">/</button>
+
+            <button type="button" data-number id="700" value="7">7</button>
+            <button type="button" data-number id="800" value="8">8</button>
+            <button type="button" data-number id="900" value="9">9</button>
+
+
+            <button type="button" data-number id="400" value="4">4</button>
+            <button type="button" data-number id="500" value="5">5</button>
+            <button type="button" data-number id="600" value="6">6</button>
+
+
+            <button type="button" data-number id="100" value="1">1</button>
+            <button type="button" data-number id="200" value="2">2</button>
+            <button type="button" data-number id="300" value="3">3</button>
+
+
+            <button type="button" data-number id="555" value="0">0</button>
+            <button type="button" data-number id="666" class="decimal" value="•">•</button>
+            <button type="button" data-all-clear class="reset" value="reset">RESET</button>
+
+            <button type="button" data-equal class="equal-sign" value="=">=</button>
+            <button type="button" data-delete class="delete" value="delete">DEL</button>
+
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,368 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: hsl(222deg, 26%, 31%);
+  font-family: "League Spartan", sans-serif;
+}
+
+body.theme2 {
+  background-color: hsl(0deg, 0%, 90%);
+}
+
+body.theme3 {
+  background-color: hsl(268deg, 75%, 9%);
+}
+
+.calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 550px;
+  height: 600px;
+}
+
+.theme-changer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 20px;
+  background-color: hsl(222deg, 26%, 31%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.theme-changer .theme {
+  margin-left: 400px;
+}
+.theme-changer .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.theme-changer .buttons .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: hsl(224deg, 36%, 15%);
+  width: 90px;
+  height: 30px;
+  border-radius: 15px;
+}
+.theme-changer .buttons .inputs.theme2 {
+  background-color: hsl(0deg, 5%, 81%);
+}
+.theme-changer .buttons .inputs.theme3 {
+  background-color: hsl(268deg, 71%, 12%);
+}
+.theme-changer .buttons .button-numbers {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+}
+.theme-changer .buttons .custom-radio-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.theme-changer .buttons .custom-radio-btn input {
+  margin: 9px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 50%;
+  border: 6px solid hsl(224deg, 36%, 15%);
+}
+.theme-changer .buttons .custom-radio-btn input.theme2 {
+  border: 6px solid hsl(0deg, 5%, 81%);
+}
+.theme-changer .buttons .custom-radio-btn input.theme3 {
+  border: 6px solid hsl(268deg, 71%, 12%);
+}
+.theme-changer .buttons .custom-radio-btn input:checked {
+  border: 6px solid hsl(6deg, 78%, 44%);
+}
+
+.theme-changer.theme2 {
+  background-color: hsl(0deg, 0%, 90%);
+  color: hsl(60deg, 10%, 19%);
+}
+
+.theme-changer.theme3 {
+  background-color: hsl(268deg, 75%, 9%);
+  color: hsl(52deg, 100%, 62%);
+}
+
+.calculator-screen {
+  width: 100%;
+  font-size: 2.3rem;
+  font-weight: bold;
+  height: 100px;
+  border: none;
+  background-color: hsl(224deg, 36%, 15%);
+  color: #fff;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+.calculator-screen.theme2 {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(60deg, 10%, 19%);
+}
+
+.calculator-screen.theme3 {
+  background: hsl(268deg, 71%, 12%);
+  color: hsl(52deg, 100%, 62%);
+}
+
+.calculator-keys {
+  height: 400px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 15px;
+  padding: 20px;
+  background-color: hsl(223deg, 31%, 20%);
+  border-radius: 10px;
+  color: hsl(221deg, 14%, 31%);
+}
+
+.calculator-keys.theme2 {
+  background-color: hsl(0deg, 5%, 81%);
+}
+
+.calculator-keys.theme3 {
+  background-color: hsl(268deg, 71%, 12%);
+}
+
+button {
+  border: none;
+  height: 100%;
+  border-radius: 10px;
+  font-size: 3rem;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.theme3 {
+  background-color: hsl(268deg, 47%, 21%);
+  color: hsl(52deg, 100%, 62%);
+}
+
+button:hover {
+  background-color: hsl(224deg, 28%, 35%);
+}
+
+button.theme2:hover {
+  background-color: hsl(185deg, 42%, 37%);
+}
+
+.operator1 {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+
+.operator2 {
+  grid-row: 3/4;
+  grid-column: 4/5;
+}
+
+.operator3 {
+  grid-row: 4/5;
+  grid-column: 4/5;
+}
+
+.operator4 {
+  grid-row: 4/5;
+  grid-column: 3/4;
+}
+
+.equal-sign {
+  background-color: hsl(6deg, 70%, 34%);
+  color: #fff;
+  height: 100%;
+  grid-column: 3/5;
+  grid-row: 5/6;
+  font-size: 1.5rem;
+}
+
+.equal-sign.theme2 {
+  background-color: hsl(25deg, 98%, 40%);
+}
+
+.equal-sign.theme3 {
+  background-color: hsl(176deg, 100%, 44%);
+}
+
+.equal-sign:hover {
+  background-color: hsl(6deg, 78%, 44%);
+}
+
+.decimal {
+  grid-row: 4/5;
+  grid-column: 1/2;
+}
+
+.delete {
+  background-color: hsl(225deg, 21%, 49%);
+  grid-row: 1/2;
+  grid-column: 4/5;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.delete.theme2 {
+  background-color: hsl(185deg, 42%, 37%);
+}
+
+.delete.theme3 {
+  background-color: hsl(281deg, 89%, 26%);
+}
+
+.delete:hover {
+  background-color: hsl(226deg, 40%, 29%);
+}
+
+.reset {
+  background-color: hsl(225deg, 21%, 49%);
+  grid-row: 5/6;
+  grid-column: 1/3;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.reset.theme3 {
+  background-color: hsl(281deg, 89%, 26%);
+}
+
+.reset.theme2 {
+  background-color: hsl(185deg, 42%, 37%);
+}
+
+.reset:hover {
+  background-color: hsl(226deg, 40%, 29%);
+}
+
+@media (max-width: 300px) {
+  .calculator {
+    width: 260px;
+    height: 520px;
+  }
+  .theme-changer {
+    font-size: 1rem;
+  }
+  .theme-changer .theme {
+    margin-left: 80px;
+  }
+  .calculator-keys {
+    height: 350px;
+  }
+}
+@media (min-width: 300px) {
+  .calculator {
+    width: 350px;
+    height: 600px;
+  }
+  .theme-changer {
+    font-size: 1.5rem;
+  }
+  .theme-changer .theme {
+    margin-left: 130px;
+  }
+}
+@media (min-width: 576px) {
+  .calculator {
+    width: 480px;
+    height: 600px;
+  }
+  .theme-changer {
+    font-size: 1.9rem;
+  }
+  .theme-changer .theme {
+    margin-left: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .calculator {
+    width: 600px;
+    height: 700px;
+  }
+  .theme-changer {
+    font-size: 1.9rem;
+  }
+  .theme-changer .theme {
+    margin-left: 350px;
+  }
+  .calculator-keys {
+    height: 500px;
+  }
+}
+@media (min-width: 992px) {
+  .calculator {
+    width: 650px;
+    height: 600px;
+  }
+  .theme-changer {
+    font-size: 1.9rem;
+  }
+  .calculator-keys {
+    height: 400px;
+  }
+}/*# sourceMappingURL=main.css.map */
