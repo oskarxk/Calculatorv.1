@@ -1,3 +1,4 @@
+const bigDecimal = window.bigDecimal;
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equal]');
@@ -24,7 +25,8 @@ const resetKey = document.querySelector('.reset');
 const key7 = document.getElementById(700);
 const key8 = document.getElementById(800);
 const key9 = document.getElementById(900);
-const key4 = document.getElementById(400);
+// const key4 = document.getElementById(400);
+const key4 = document.querySelector('.btn-400');
 const key5 = document.getElementById(500);
 const key6 = document.getElementById(600);
 const key1 = document.getElementById(100);
@@ -194,20 +196,20 @@ const calculate = () => {
 
 	switch (operation) {
 		case '+':
-			operate = previous + current;
+			operate = bigDecimal.add(previous, current);
 			break;
 		case '-':
-			operate = previous - current;
+			operate = bigDecimal.subtract(previous, current);
 			break;
 		case '×':
-			operate = previous * current;
+			operate = bigDecimal.multiply(previous, current);
 			break;
 		case '/':
 			if (current === 0) {
 				clearCalculator();
 				return;
 			}
-			operate = previous / current;
+			operate = bigDecimal.divide(previous, current);
 			break;
 		default:
 			break;
